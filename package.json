@@ -1,0 +1,26 @@
+{
+  "name": "sqliteproyect",
+  "version": "1.0.0",
+  "description": "prueba de ZEIT",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wilson-pc/sqliteproyect.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wilson-pc/sqliteproyect/issues"
+  },
+  "homepage": "https://github.com/wilson-pc/sqliteproyect#readme",
+  "devDependencies": {
+    "@prisma/cli": "^2.0.0-beta.4"
+  },
+  "dependencies": {
+    "@prisma/client": "^2.0.0-beta.4",
+    "express": "^4.17.1"
+  }
+}
