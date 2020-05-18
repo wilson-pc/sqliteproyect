@@ -15,7 +15,7 @@ app.post(`/user`, async (req, res) => {
   res.json(result);
 });
 
-app.post(`/`, async (req, res) => {
+app.get(`/`, async (req, res) => {
   res.json({ hello: "animedia eceuifb23u" });
 });
 app.post(`/post`, async (req, res) => {
@@ -30,7 +30,10 @@ app.post(`/post`, async (req, res) => {
   });
   res.json(result);
 });
-
+app.get(`/user`, async (req, res) => {
+  const result = await prisma.user.findMany();
+  res.json(result);
+});
 app.put("/publish/:id", async (req, res) => {
   const { id } = req.params;
   const post = await prisma.post.update({
