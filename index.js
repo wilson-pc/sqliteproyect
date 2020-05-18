@@ -5,8 +5,7 @@ const { PrismaClient } = require("@prisma/client");
 
 const prisma = new PrismaClient();
 app.use(bodyParser.json());
-const port = 3000;
-
+const PORT = process.env.PORT || 3000;
 app.post(`/user`, async (req, res) => {
   const result = await prisma.user.create({
     data: {
@@ -16,6 +15,9 @@ app.post(`/user`, async (req, res) => {
   res.json(result);
 });
 
+app.post(`/`, async (req, res) => {
+  res.json({ hello: "animedia eceuifb23u" });
+});
 app.post(`/post`, async (req, res) => {
   const { title, content, authorEmail } = req.body;
   const result = await prisma.post.create({
@@ -87,6 +89,6 @@ app.get("/filterPosts", async (req, res) => {
   res.json(draftPosts);
 });
 
-app.listen(port, () =>
-  console.log(`Example enieji app listening at http://localhost:${port}`)
+app.listen(PORT, () =>
+  console.log(`Example enieji app listening at http://localhost:${PORT}`)
 );
