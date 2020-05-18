@@ -15,7 +15,7 @@ app.post(`/user`, async (req, res) => {
   res.json(result);
 });
 
-app.get(`/`, async (req, res) => {
+app.get("/", async (req, res) => {
   res.json({ hello: "animedia eceuifb23u" });
 });
 app.post(`/post`, async (req, res) => {
